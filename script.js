@@ -1,14 +1,13 @@
 const number = document.querySelector("#number1");
 const btn = document.querySelector("#draw1");
 const area = document.querySelector("#result");
+let diamond = "";
 
 btn.addEventListener("click", () => {
   drawDiamond();
 });
 
 const drawDiamond = () => {
-  let diamond = "";
-
   for (let i = 1; i <= number.value; i++) {
     // printing spaces
     for (let j = number.value; j > i; j--) {
@@ -22,8 +21,8 @@ const drawDiamond = () => {
         diamond += " ";
       }
     }
+    diamond += "\n";
   }
-  diamond += "\n";
 
   // downside diamond
   for (let i = 1; i <= number.value - 1; i++) {
